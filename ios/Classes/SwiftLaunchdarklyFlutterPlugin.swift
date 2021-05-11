@@ -64,7 +64,7 @@ import LaunchDarkly
         
         let flagKey = arguments["flagKey"] as? String ?? ""
         
-        result(LDClient.shared.variation(forKey: flagKey, fallback: false))
+        result(LDClient.shared.variation(forKey: flagKey, fallback: false) as Bool)
 
     } else if (call.method == "boolVariationFallback") {
         
@@ -78,7 +78,7 @@ import LaunchDarkly
         
         let flagKey = arguments["flagKey"] as? String ?? ""
         
-        result(LDClient.shared.variation(forKey: flagKey, fallback: ""))
+        result(LDClient.shared.variation(forKey: flagKey, fallback: "") as String)
 
     } else if(call.method == "stringVariationFallback") {
         
