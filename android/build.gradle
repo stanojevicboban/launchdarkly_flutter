@@ -1,5 +1,5 @@
 group 'com.oakam.launchdarkly_flutter'
-version '0.6.0'
+version '0.6.1'
 
 buildscript {
     repositories {
@@ -22,10 +22,10 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -34,5 +34,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.launchdarkly:launchdarkly-android-client-sdk:2.11.0'
+    implementation 'com.launchdarkly:launchdarkly-android-client-sdk:3.0.0'
 }
