@@ -53,7 +53,7 @@ import LaunchDarkly
         LDClient.start(config: config, user: createUser(arguments: arguments), startWaitSeconds: 5) { timedOut in
             result(true)
         }
-
+        
     } else if (call.method == "identify") {
         LDClient.get()!.identify(user: createUser(arguments: arguments), completion: { result(true) })
     
